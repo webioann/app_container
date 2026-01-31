@@ -1,0 +1,17 @@
+{
+  "name": "e-commerce",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build --prefix admin && npm run build --prefix server",
+    "start": "npm run start --prefix server"
+  },
+  "keywords": [],
+  "author": "Webioann",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "mongoose": "^9.1.5"
+  }
+}
