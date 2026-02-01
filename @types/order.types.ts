@@ -1,22 +1,29 @@
+import { Types, Document } from 'mongoose';
 import { AuthProviderType } from './user.types.ts';
 import { ShippingAddressType } from './address.types.ts';
 
-export interface OrderItemType {
-    productId: string;
+export type OrderStatusType = "pending" | "shipped" | "delivered";
+
+export interface OrderItemType  extends Document {
+    // ref to Product model id ==
+    productId: Types.ObjectId;
     productName: string;
     price: number;
     quantity: number;
     image: string;
 }
-
 export interface OrderType {
     userId: string;
     provider: AuthProviderType;
     orderItemsList: OrderItemType[];
     shippingAddress: ShippingAddressType;
-    paymentStatus: string;
+    paymentStatus: {
+        id: string;
+        status: "processing" | "succeeded" | "canceled";
+    };
     totalPrice: number;
-    status: "pending" | "shipped" | "delivered";
-    deliveredAt: Date;
+    status: OrderStatusType;
+    orderedAt: Date;
     shippedAt: Date;
+    deliveredAt: Date;
 }
