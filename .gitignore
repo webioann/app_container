@@ -2,9 +2,14 @@
 
 # dependencies
 node_modules/
-#  3 folders admin mobil server
+#  == VERY IMPORTANT ==
 admin
 mobile
 server
 # desktop ini
 desktop.ini
+# ENV files ==
+.env
+.env.local
+.env.*
+.env.*.*
