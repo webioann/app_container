@@ -1,10 +1,10 @@
 import { Types, Document } from 'mongoose';
-import { AuthProviderType } from './user.types.ts';
-import { ShippingAddressType } from './address.types.ts';
+import { AuthProviderType } from './user.types';
+import { ShippingAddressType } from './address.types';
 
 export type OrderStatusType = "pending" | "shipped" | "delivered";
 
-export interface OrderItemType  extends Document {
+export interface OrderItemType {
     // ref to Product model id ==
     productId: Types.ObjectId;
     productName: string;

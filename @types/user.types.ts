@@ -9,6 +9,7 @@ export interface UserType extends Document {
     username: string;
     email: string;
     password: string;
+    imageUrl: string;
     role: RolesType;
     authProviderId: string;
     addresses: AddressType[];
@@ -16,3 +17,4 @@ export interface UserType extends Document {
     createdAt: Date;
     updatedAt: Date;
 }
+// NEED IMAGE URL for avatar
