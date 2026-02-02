@@ -11,7 +11,7 @@ export interface UserType extends Document {
     password: string;
     imageUrl: string;
     role: RolesType;
-    authProviderId: string;
+    provider: AuthProviderType;
     addresses: AddressType[];
     wishlist: string[];
     createdAt: Date;
