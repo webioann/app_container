@@ -11,5 +11,5 @@ export interface ProductType extends mongoose.Document {
     averageRating: number;
     totalReviews: number;
     createdAt: string;
-    // updatedAt: string;
+    updatedAt: string;
 }
